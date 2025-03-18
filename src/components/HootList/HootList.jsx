@@ -4,7 +4,8 @@ import { Link } from 'react-router';
 const HootList = (props) => {
     return (
         <main>
-            {props.hoots.map((hoot) => {
+            <h1>Hoot List</h1>
+            {props.hoots.map((hoot) => (
                 <Link key={hoot._id} to={`/hoots/${hoot._id}`}>
                     <article>
                         <header>
@@ -17,7 +18,7 @@ const HootList = (props) => {
                         </header>
                     </article>
                 </Link>
-            })}
+            ))}
         </main>
     )
 };
